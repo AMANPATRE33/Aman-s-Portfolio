@@ -5,13 +5,13 @@
 // --- IMPORTS ---
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 
 const PROFILE_URL = "/profile.jpg";
 
 const SOCIALS = [
   { icon: Github, label: "GitHub", href: "https://github.com/amanpatre33" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/aman-patre-968064intial" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/aman-patre-968064intial/" },
   { icon: Mail, label: "Email", href: "mailto:amanpatre33@gmail.com" },
 ];
 
@@ -150,7 +150,11 @@ export function Hero() {
           >
             <img
               src={PROFILE_URL}
-              alt="Aman Patre"
+              alt="Aman Patre - Data Analyst and AI/ML Enthusiast"
+              width={220}
+              height={220}
+              loading="eager"
+              decoding="async"
               className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0e0d11]/30 via-transparent to-transparent" />
@@ -288,6 +292,15 @@ export function Hero() {
             className="px-8 py-3.5 border border-[#f97316]/30 text-[#f5ede4] rounded-full hover:border-[#f97316]/60 hover:text-white transition-all duration-200 hover:bg-white/5"
           >
             Get In Touch
+          </a>
+          <a
+            href="/Aman_DA.pdf"
+            download
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/15 text-[#f5ede4] rounded-full hover:border-[#fdba74]/70 hover:text-white transition-all duration-200 hover:bg-white/5"
+          >
+            <Download size={16} />
+            Resume
           </a>
         </motion.div>
 

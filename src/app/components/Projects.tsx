@@ -16,7 +16,7 @@ const PROJECTS = [
     description:
       "Built an unsupervised ML pipeline on 2,200+ customer records. Applied K-Means clustering with Elbow Method hyperparameter tuning to identify 6 optimal segments, reducing misclassification. Engineered 5+ behavioral features and applied PCA to reduce 7D space to 2D for personas visualization.",
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["Machine Learning", "Clustering"],
     tech: ["Python", "K-Means", "PCA", "Streamlit", "Scikit-learn", "joblib"],
     stars: "2.2k Records",
@@ -34,7 +34,7 @@ const PROJECTS = [
     description:
       "IoT-enabled full-stack cafeteria platform with real-time occupancy dashboards across 5+ zone sensors, digital ordering system, and revenue analytics. Architected a Supabase cloud backend supporting 200+ daily transactions with normalized schemas.",
     image:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["IoT", "Full Stack"],
     tech: ["Python", "IoT", "Supabase", "PostgreSQL", "React", "Vercel"],
     stars: "200+ Tx/Day",
@@ -52,7 +52,7 @@ const PROJECTS = [
     description:
       "End-to-end ML web application predicting crop yield across 10+ crop types using a Random Forest pipeline. Features a Streamlit dashboard with dynamic forms, prediction history tracking, and feature importance visualization.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["Predictive ML", "Agriculture"],
     tech: ["Python", "Streamlit", "Random Forest", "Scikit-learn", "Pandas"],
     stars: "5k+ Samples",
@@ -70,7 +70,7 @@ const PROJECTS = [
     description:
       "Trained a Linear Regression pipeline on 7 student features, achieving 88% prediction accuracy for math scores. Engineered instant single-prediction UI, batch CSV mode, and a Scenario Simulator to quantify academic interventions.",
     image:
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["Regression", "Education"],
     tech: ["Python", "Scikit-learn", "Streamlit", "Plotly"],
     stars: "88% Accuracy",
@@ -88,7 +88,7 @@ const PROJECTS = [
     description:
       "Engineered an AI-powered planning dashboard processing 1.8M+ simulation data points to forecast Aadhaar biometric enrollment demands across multiple states. Built automated operational risk models to prevent system bottlenecks at scale.",
     image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["Predictive Analytics", "Hackathon"],
     tech: ["Python", "Streamlit", "Time-Series", "Predictive Analytics"],
     stars: "1.8M+ Points",
@@ -106,7 +106,7 @@ const PROJECTS = [
     description:
       "Reframed a rating regression problem as classification to handle low target variance, training an XGBoost classifier achieving 70% accuracy on 10,000+ product records. Identified discount percentage and review count as the top rating drivers.",
     image:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=500&fit=crop&auto=format&q=80",
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=480&h=300&fit=crop&auto=format&q=80",
     tags: ["Classification", "E-Commerce"],
     tech: ["Python", "XGBoost", "Feature Engineering", "Pandas"],
     stars: "10k+ Records",
@@ -169,6 +169,10 @@ function ProjectCard({
           <motion.img
             src={project.image}
             alt={project.name}
+            width={480}
+            height={300}
+            loading="lazy"
+            decoding="async"
             animate={hovered ? { scale: 1.06 } : { scale: 1 }}
             transition={{ duration: 0.5 }}
             className="w-full h-full object-cover grayscale brightness-[0.9] group-hover:grayscale-0 transition-all duration-500"

@@ -5,7 +5,7 @@
 // --- IMPORTS ---
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -84,11 +84,13 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="mailto:amanpatre33@gmail.com"
+              href="/Aman_DA.pdf"
+              download
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-sm px-5 py-2 border border-[#f97316]/30 text-[#f5ede4] rounded-full hover:bg-[#f97316]/10 hover:border-[#f97316]/60 hover:text-white transition-all duration-200"
+              className="inline-flex items-center gap-2 text-sm px-5 py-2 border border-[#f97316]/30 text-[#f5ede4] rounded-full hover:bg-[#f97316]/10 hover:border-[#f97316]/60 hover:text-white transition-all duration-200"
             >
-              Hire Me
+              <Download size={14} />
+              Resume
             </a>
           </div>
 
@@ -123,12 +125,14 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="mailto:amanpatre33@gmail.com"
+            href="/Aman_DA.pdf"
+            download
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            className="text-center text-sm mt-2 px-5 py-2.5 border border-[#f97316]/30 text-[#f5ede4] rounded-full hover:bg-[#f97316]/10 hover:border-[#f97316]/60 hover:text-white transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 text-center text-sm mt-2 px-5 py-2.5 border border-[#f97316]/30 text-[#f5ede4] rounded-full hover:bg-[#f97316]/10 hover:border-[#f97316]/60 hover:text-white transition-all duration-200"
             onClick={() => setMobileOpen(false)}
           >
-            Hire Me
+            <Download size={14} />
+            Resume
           </a>
         </div>
       </motion.div>

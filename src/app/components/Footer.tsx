@@ -5,12 +5,12 @@
 // --- IMPORTS ---
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Download } from "lucide-react";
 import { SubtleSectionSpotlight } from "./SubtleSectionSpotlight";
 
 const SOCIALS = [
   { icon: Github, label: "GitHub", href: "https://github.com/amanpatre33", handle: "@amanpatre33" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/aman-patre-968064intial", handle: "in/aman-patre" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/aman-patre-968064intial/", handle: "in/aman-patre-968064intial" },
   { icon: Mail, label: "Email", href: "mailto:amanpatre33@gmail.com", handle: "amanpatre33" },
 ];
 
@@ -88,20 +88,33 @@ export function Footer() {
           role, a consulting project, or an interesting side venture. Let's talk.
         </motion.p>
 
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 120 }}
-          href="mailto:amanpatre33@gmail.com"
-          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#f97316] to-[#ec4899] text-white rounded-full font-semibold hover:from-[#ff8c3a] hover:to-[#f43f5e] transition-all duration-200 hover:shadow-[0_0_50px_rgba(249,115,22,0.45)] mb-14 group"
+          className="flex flex-wrap justify-center gap-4 mb-14"
         >
-          Say Hello
-          <ArrowUpRight
-            size={18}
-            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-          />
-        </motion.a>
+          <a
+            href="mailto:amanpatre33@gmail.com"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#f97316] to-[#ec4899] text-white rounded-full font-semibold hover:from-[#ff8c3a] hover:to-[#f43f5e] transition-all duration-200 hover:shadow-[0_0_50px_rgba(249,115,22,0.45)] group"
+          >
+            Say Hello
+            <ArrowUpRight
+              size={18}
+              className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+            />
+          </a>
+          <a
+            href="/Aman_DA.pdf"
+            download
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-flex items-center gap-3 px-10 py-4 border border-[#f97316]/30 text-[#f5ede4] rounded-full font-semibold hover:bg-white/5 hover:border-[#f97316]/60 hover:text-white transition-all duration-200"
+          >
+            Resume
+            <Download size={18} />
+          </a>
+        </motion.div>
 
         {/* Socials */}
         <motion.div

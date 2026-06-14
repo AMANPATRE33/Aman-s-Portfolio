@@ -14,9 +14,9 @@ const SKILL_GROUPS = [
     Icon: Code2,
     color: "#f97316",
     skills: [
-      { name: "Python", level: 95 },
-      { name: "SQL", level: 90 },
-      { name: "PowerBi", level: 88 },
+      { name: "Python", level: "Advanced" },
+      { name: "SQL", level: "Advanced" },
+      { name: "Power BI", level: "Project Experience" },
     ],
   },
   {
@@ -24,10 +24,10 @@ const SKILL_GROUPS = [
     Icon: Layout,
     color: "#ec4899",
     skills: [
-      { name: "Scikit-learn", level: 92 },
-      { name: "Predictive & Clustering ML", level: 88 },
-      { name: "Computer Vision (OpenCV)", level: 82 },
-      { name: "TensorFlow / PyTorch", level: 75 },
+      { name: "Scikit-learn", level: "Advanced" },
+      { name: "Predictive & Clustering ML", level: "Project Experience" },
+      { name: "Computer Vision (OpenCV)", level: "Working Knowledge" },
+      { name: "TensorFlow / PyTorch", level: "Working Knowledge" },
     ],
   },
   {
@@ -35,10 +35,10 @@ const SKILL_GROUPS = [
     Icon: Server,
     color: "#fdba74",
     skills: [
-      { name: "Power BI", level: 90 },
-      { name: "Streamlit Development", level: 95 },
-      { name: "Pandas & NumPy", level: 94 },
-      { name: "Plotly / Matplotlib / Seaborn", level: 88 },
+      { name: "Power BI", level: "Project Experience" },
+      { name: "Streamlit Development", level: "Advanced" },
+      { name: "Pandas & NumPy", level: "Advanced" },
+      { name: "Plotly / Matplotlib / Seaborn", level: "Project Experience" },
     ],
   },
   {
@@ -46,9 +46,9 @@ const SKILL_GROUPS = [
     Icon: Cloud,
     color: "#fbbf24",
     skills: [
-      { name: "Supabase (PostgreSQL)", level: 88 },
-      { name: "Vercel / Git / GitHub", level: 92 },
-      { name: "Google Cloud / Colab", level: 84 },
+      { name: "Supabase (PostgreSQL)", level: "Project Experience" },
+      { name: "Vercel / Git / GitHub", level: "Daily Use" },
+      { name: "Google Cloud / Colab", level: "Working Knowledge" },
     ],
   },
 ];
@@ -59,7 +59,7 @@ function SkillBar({
   index,
   groupInView,
 }: {
-  skill: { name: string; level: number };
+  skill: { name: string; level: string };
   color: string;
   index: number;
   groupInView: boolean;
@@ -77,13 +77,13 @@ function SkillBar({
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
           className="text-xs text-[#a1a1aa]"
         >
-          {skill.level}%
+          {skill.level}
         </span>
       </div>
       <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
         <motion.div
           initial={{ width: "0%" }}
-          animate={groupInView ? { width: `${skill.level}%` } : { width: "0%" }}
+          animate={groupInView ? { width: "100%" } : { width: "0%" }}
           transition={{
             duration: 1.2,
             delay: 0.4 + index * 0.1,

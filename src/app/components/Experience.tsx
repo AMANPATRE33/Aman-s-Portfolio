@@ -17,6 +17,7 @@ const EXPERIENCES = [
     location: "Gujarat, India",
     accent: "#f97316",
     logo: "U",
+    website: "https://www.upl-ltd.com/",
     highlights: [
       "Cleaned and analyzed 3+ industrial IoT sensor datasets using Python (Pandas, NumPy), identifying 200+ anomalous records across shift-level production logs to surface actionable operational inefficiencies.",
       "Built optimization models across 6 operational parameters, improving plant energy efficiency KPIs and reducing manual reporting effort for weekly cross-departmental reviews.",
@@ -127,7 +128,10 @@ function ExperienceCard({
             </div>
           </div>
           <a
-            href="#"
+            href={exp.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${exp.company} website`}
             className="text-[#a1a1aa] hover:text-[#ffffff] transition-colors opacity-0 group-hover:opacity-100"
           >
             <ExternalLink size={16} />
