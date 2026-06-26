@@ -8,7 +8,60 @@ import { motion, useInView } from "motion/react";
 import { Github, ExternalLink, Star } from "lucide-react";
 import { SubtleSectionSpotlight } from "./SubtleSectionSpotlight";
 
-const PROJECTS = [
+interface ProjectType {
+  id: number;
+  name: string;
+  tagline: string;
+  description: string;
+  image: string;
+  tags: string[];
+  tech: string[];
+  stars: string;
+  users: string;
+  featured: boolean;
+  accent: string;
+  github: string;
+  demo?: string;
+  Report?: string;
+  gridClass: string;
+}
+
+const PROJECTS: ProjectType[] = [
+  {
+    id: 7,
+    name: "Customer Churn Prediction System",
+    tagline: "Predictive ML Attrition Diagnostic Platform",
+    description:
+      "Architected a production-grade machine learning platform using a serialized Support Vector Classifier (SVC) pipeline, achieving 94.5% prediction accuracy. Built a real-time Streamlit diagnostic portal and high-volume batch CSV audit studio generating automated Kernel Density Estimate plots and confusion matrices.",
+    image:
+      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=480&h=300&fit=crop&auto=format&q=80",
+    tags: ["Predictive ML", "Customer Analytics"],
+    tech: ["Python", "Scikit-learn", "SVM", "Streamlit", "Joblib", "Plotly", "Seaborn"],
+    stars: "94.5% Accuracy",
+    users: "10k+",
+    featured: true,
+    accent: "#c084fc",
+    github: "https://github.com/AMANPATRE33/Churn-Prediction",
+    gridClass: "md:col-span-1 lg:col-span-1",
+  },
+  {
+    id: 8,
+    name: "Global Supply Chain Analysis",
+    tagline: "Fulfillment Predictor & Operational Analytics",
+    description:
+      "Diagnosed supply chain inefficiencies across 180K+ transactions to mitigate a $2.1M profit erosion. Trained a point-of-sale Random Forest Classifier optimized with SMOTE and frequency encoding to preempt late delivery cycles, achieving 82% accuracy and 86% precision.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=480&h=300&fit=crop&auto=format&q=80",
+    tags: ["Operations Analytics", "Predictive ML"],
+    tech: ["Python", "Random Forest", "SMOTE", "Feature Engineering", "ETL", "Time-Series", "Pandas"],
+    stars: "180k+ Records",
+    users: "12k+",
+    featured: true,
+    accent: "#14b8a6",
+    github: "https://github.com/AMANPATRE33/Supply-Chain-Analysis",
+    Report: "https://github.com/AMANPATRE33/Supply-Chain-Analysis/blob/main/README.md",
+    gridClass: "md:col-span-1 lg:col-span-1",
+  },
   {
     id: 1,
     name: "Customer Segmentation Engine",
@@ -161,7 +214,7 @@ function ProjectCard({
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => { setHovered(false); setTilt({ x: 0, y: 0 }); }}
         onMouseMove={handleMouseMove}
-        onClick={() => window.open(project.demo, "_blank")}
+        onClick={() => window.open(project.demo || project.Report || project.github, "_blank")}
         className="h-full rounded-2xl overflow-hidden border border-[#f97316]/10 hover:border-[#f97316]/30 hover:shadow-[0_0_25px_rgba(249,115,22,0.08)] transition-all duration-300 cursor-pointer group"
       >
         {/* Image */}
@@ -216,16 +269,18 @@ function ProjectCard({
             >
               <Github size={14} />
             </a>
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="w-8 h-8 rounded-full bg-[#0c0c0c]/85 border border-white/10 flex items-center justify-center text-[#a1a1aa] hover:text-[#f97316] transition-colors"
-              title="Live Demo"
-            >
-              <ExternalLink size={14} />
-            </a>
+            {(project.demo || project.Report) && (
+              <a
+                href={project.demo || project.Report}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="w-8 h-8 rounded-full bg-[#0c0c0c]/85 border border-white/10 flex items-center justify-center text-[#a1a1aa] hover:text-[#f97316] transition-colors"
+                title={project.demo ? "Live Demo" : "View Report"}
+              >
+                <ExternalLink size={14} />
+              </a>
+            )}
           </div>
         </div>
 

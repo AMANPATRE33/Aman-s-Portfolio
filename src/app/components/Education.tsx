@@ -28,7 +28,7 @@ const EDUCATION = [
     activities: [
       { icon: BookOpen, text: "Developed Smart Anna Intelligent Cafeteria platform" },
       { icon: Users, text: "Completed Deloitte Australia Data Analytics simulation" },
-      { icon: Award, text: "Academic Excellence with 9.25 SPI in 7th Semester" },
+      { icon: Award, text: "Academic Excellence with 9.32 SPI in 8th Semester" },
     ],
   },
 ];
