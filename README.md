@@ -1,51 +1,54 @@
-# 🌟 Personal Portfolio - Aman Patre
-> **Data Analyst, Data Scientist & AI/ML Enthusiast**
+# Personal Portfolio - Aman Patre
 
-Welcome to my personal portfolio repository! This is a modern, responsive, and highly interactive single-page application designed to showcase my academic background, technical skills, data projects, and professional work history. 
+> Data Analyst, Data Scientist & Machine Learning Engineer
 
-Features a sleek **Sunset Fire & Charcoal** theme, cursor-glow section spotlights, a fully interactive Minecraft Companion avatar, and verified credential links.
+Welcome to the official repository for my personal portfolio website. This is a modern, responsive single-page web application designed to showcase my academic qualifications, technical toolkit, data science projects, and professional history.
 
----
-
-## ✨ Key Features
-
-- **🎮 Interactive Minecraft Companion**: A custom-designed, pixel-shaded vector avatar equipped with headphones, glowing accents, and a golden crown. It features dynamic pupil tracking, scroll-aware remarks, reactive touch states, and an embedded cookie-feeding mini-game.
-- **🎨 Sunset Fire & Charcoal Theme**: Curated dark background aesthetics (`#0e0d11`) paired with vibrant orange-to-rose gradients (`#f97316` to `#ec4899`) and warm peach highlights (`#fdba74`).
-- **🔍 Subtle Section Spotlights**: Scroll-bound, eased radial gradients follow the cursor behind cards, illuminating borders and background grids dynamically.
-- **📱 Fluid Responsiveness**: Custom word wrapping for staggered titles, responsive container margins, and fluid card padding optimized for all devices, from small smartphones (320px) to ultra-wide displays.
-- **📜 Verified Certifications**: Interactive, clickable certification cards featuring a hover translation lift effect and instant external verification links for Udemy, IBM, and Deloitte job simulations.
-- **🔠 Space Grotesk Typography**: Swapped the entire typography system to the modern, tech-forward geometric font *Space Grotesk*, paired with *JetBrains Mono* for telemetry and monospace details.
+The application features a dark charcoal interface, interactive cursor section lighting, a custom interactive companion avatar, and links to verified achievements.
 
 ---
 
-## 🛠️ Technology Stack
+## Key Features
+
+- **Interactive Avatar Companion**: A pixel-shaded vector avatar equipped with scroll-aware comments, dynamic pupil tracking, interactive responses, and a mini-game.
+- **Visual Design System**: Dark background aesthetics paired with orange-to-rose gradients and warm peach highlights.
+- **Section Spotlights**: Eased radial gradients follow the cursor behind cards, dynamically highlighting borders and grids.
+- **Responsive Layout**: Custom typography wrapping and margins optimized for devices ranging from mobile screens (320px) to ultra-wide desktop displays.
+- **Verified Credentials**: Clickable certification cards with hover translation effects and external validation links for professional simulations and coursework.
+- **Space Grotesk Typography**: Sleek, modern geometric typography paired with JetBrains Mono for monospace labels and telemetry data.
+
+---
+
+## Technical Stack
 
 - **Core Framework**: React 18 & TypeScript
 - **Styling**: Tailwind CSS v4 & Vanilla CSS
-- **Animations**: Motion (formerly Framer Motion)
+- **Animations**: Motion
 - **Bundler & Dev Server**: Vite v6
 - **Icons**: Lucide React
 
 ---
 
-## 📁 Project Highlights Showcased
+## Selected Projects
 
-1. **Customer Segmentation Engine**: Unsupervised ML pipeline clustering 2,200+ records using K-Means and PCA behavioral feature analysis.
-2. **Smart Anna Cafeteria System**: Full-stack IoT ordering and zone occupancy platform powered by React and a Supabase cloud database.
-3. **AgriYield Pro**: Crop yield predictive model built with Python, Streamlit, and a Random Forest regression pipeline.
-4. **EduPredict Pro**: Student academic performance scenario simulator utilizing Linear Regression.
-5. **UIDAI Biometric Dashboard**: Time-series demand forecasting dashboard processing 1.8M+ biometric enrollment simulation points.
-6. **Product Rating Classifier**: XGBoost rating driver analytics engine trained on 10,000+ e-commerce records.
+1. **Customer Churn Prediction System**: Production-grade machine learning platform using a serialized Support Vector Classifier (SVC) pipeline to calculate attrition risk with 94.5% prediction accuracy.
+2. **Global Supply Chain Analysis**: Predictive modeling system analyzing 180K+ transactions to diagnose operational latency and mitigate delay risks, utilizing a Random Forest Classifier optimized with SMOTE.
+3. **Customer Segmentation Engine**: Unsupervised ML pipeline clustering 2,200+ customer records using K-Means and PCA behavioral feature analysis.
+4. **Smart Anna Cafeteria System**: Full-stack IoT ordering and zone occupancy platform powered by React and a Supabase PostgreSQL database.
+5. **AgriYield Pro**: Crop yield predictive model built with Python, Streamlit, and a Random Forest regression pipeline.
+6. **EduPredict Pro**: Student academic performance scenario simulator utilizing Linear Regression models.
+7. **UIDAI Biometric Dashboard**: Time-series demand forecasting dashboard processing 1.8M+ biometric enrollment simulation data points.
+8. **Product Rating Classifier**: XGBoost rating driver analytics engine trained on 10,000+ e-commerce records.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-Follow these steps to run the portfolio website locally on your machine.
+Follow these steps to run the portfolio website locally.
 
 ### Prerequisites
 
-Ensure you have **Node.js** (v18 or higher recommended) installed.
+Node.js (version 18 or higher is recommended) installed on your system.
 
 ### Installation & Development
 
@@ -64,9 +67,9 @@ Ensure you have **Node.js** (v18 or higher recommended) installed.
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to the local URL (typically `http://localhost:5173/` or as prompted in the terminal console).
+   Open your browser and navigate to the local URL (typically `http://localhost:5173/` as indicated in the terminal).
 
-4. **Compile production-ready bundle**:
+4. **Compile production bundle**:
    ```bash
    npm run build
    ```
@@ -74,6 +77,6 @@ Ensure you have **Node.js** (v18 or higher recommended) installed.
 
 ---
 
-## 📄 License & Attribution
+## License & Attribution
 
 This website was designed and built by **Aman Patre**. Designs are adapted from the [Figma Personal Portfolio Template](https://www.figma.com/design/WTl7VO9o9YBBRRyvCoC1BC/Personal-Portfolio-Website).
